@@ -1,11 +1,29 @@
-<script setup></script>
+<script setup>
+import AppNavbar from './components/AppNavbar.vue'
+import HeroSection from './components/HeroSection.vue'
+import TechStack from './components/TechStack.vue'
+import ProjectsSection from './components/ProjectsSection.vue'
+import AboutSection from './components/AboutSection.vue'
+import ContactSection from './components/ContactSection.vue'
+import AppFooter from './components/AppFooter.vue'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div class="portfolio-container">
+    <AppNavbar />
+    <main>
+      <HeroSection id="inicio" />
+      <TechStack id="tecnologias" />
+      <ProjectsSection id="proyectos" />
+      <AboutSection id="sobre-mi" />
+      <ContactSection id="contacto" />
+    </main>
+    <AppFooter />
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+html {
+  scroll-behavior: smooth;
+}
+</style>
